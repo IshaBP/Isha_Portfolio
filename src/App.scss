@@ -1,0 +1,17 @@
+@import "./theme/globalVariables.scss";
+
+.background {
+  background-size: cover;
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+.darkPrimary {
+  @extend .background;
+  background-color: $darkThemePrimary;
+}
+
+.lightPrimary {
+  @extend .background;
+  background-color: $lightThemePrimary;
+}

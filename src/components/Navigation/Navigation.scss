@@ -1,0 +1,26 @@
+@import "../../theme/globalVariables.scss";
+
+$sideBarWidth: 220px;
+$logoHeight: 100px;
+$sideBarContentHeight: 50px;
+
+.sidebar {
+  width: $sideBarWidth;
+}
+
+.sidebarPaper {
+  width: $sideBarWidth;
+}
+
+.navBar {
+  display: flex;
+  .MuiPaper-root {
+    background-color: $themeSecondary;
+  }
+  .ishaLogo {
+    height: $logoHeight;
+    pointer-events: none;
+  }
+  line-height: $sideBarContentHeight;
+  text-align: center;
+}
