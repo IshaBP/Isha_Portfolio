@@ -38,7 +38,7 @@ export const ThemeWrapper = (props: { children: React.ReactNode }) => {
       value={{
         theme: darkMode ? Themes.DARK : Themes.LIGHT,
         toggle: toggleDarkMode,
-        isDarkModeActivated: darkMode
+        isDarkModeActive: darkMode
       }}
     >
       {props.children}

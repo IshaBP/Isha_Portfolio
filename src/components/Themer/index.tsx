@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Button } from '@material-ui/core';
-
 import { ThemeContext } from '../../theme/themeContext';
 
 const Themer = () => {
@@ -14,7 +12,7 @@ const Themer = () => {
   console.log("theme", theme);
   return (
     <div className="themer">
-      <Button onClick={changeTheme}>Change</Button>
+      <button onClick={changeTheme}>Change</button>
     </div>
   );
   //   const { theme, toggle,  } = React.useContext(ThemeContext)

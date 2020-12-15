@@ -1,9 +1,9 @@
 import NavObject from './components/Navigation/types';
-import About from './pages/About/About';
-import Contact from './pages/Contact/Contact';
-import Home from './pages/Home/Home';
-import Projects from './pages/Projects/Projects';
-import Skills from './pages/Skills/Skills';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
 
 const NAV_ITEMS: Array<NavObject> = [
   { section: "Home", path: "/", component: Home },

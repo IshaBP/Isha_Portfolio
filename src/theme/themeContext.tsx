@@ -17,7 +17,7 @@ export const Themes: ThemeConfig = {
 const initialState: ThemeContextType = {
   theme: Themes.DARK,
   toggle: () => {},
-  isDarkModeActivated: true
+  isDarkModeActive: true
 };
 
 export const ThemeContext: React.Context<ThemeContextType> = React.createContext(

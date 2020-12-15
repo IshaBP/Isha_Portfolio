@@ -14,5 +14,5 @@ export type ThemeConfig = {
 export type ThemeContextType = {
   theme: ThemeParams;
   toggle: () => void;
-  isDarkModeActivated: boolean;
+  isDarkModeActive: boolean;
 };

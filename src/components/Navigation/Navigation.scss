@@ -1,26 +1,39 @@
 @import "../../theme/globalVariables.scss";
 
-$sideBarWidth: 220px;
-$logoHeight: 100px;
-$sideBarContentHeight: 50px;
-
-.sidebar {
-  width: $sideBarWidth;
-}
-
-.sidebarPaper {
-  width: $sideBarWidth;
-}
-
-.navBar {
+.nav {
   display: flex;
-  .MuiPaper-root {
-    background-color: $themeSecondary;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  z-index: 10;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    .menuItem {
+      padding: 2rem;
+      list-style: none;
+      .linkText {
+        text-decoration: none;
+      }
+    }
   }
   .ishaLogo {
-    height: $logoHeight;
-    pointer-events: none;
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
   }
-  line-height: $sideBarContentHeight;
-  text-align: center;
+}
+
+.light {
+  background-color: $lightThemePrimary;
+}
+
+.dark {
+  background-color: $darkThemePrimary;
 }
