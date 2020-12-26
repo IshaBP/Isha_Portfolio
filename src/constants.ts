@@ -6,11 +6,16 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 
 const NAV_ITEMS: Array<NavObject> = [
-  { section: "Home", path: "/", component: Home },
-  { section: "About", path: "/about", component: About } /* Text + Timeline */,
-  { section: "Skills", path: "/skills", component: Skills },
-  { section: "Projects", path: "/projects", component: Projects },
-  { section: "Contact", path: "/contact", component: Contact }
+  { id: "1", section: "Home", path: "/", component: Home },
+  {
+    id: "2",
+    section: "About",
+    path: "/about",
+    component: About
+  } /* Text + Timeline */,
+  { id: "3", section: "Skills", path: "/skills", component: Skills },
+  { id: "4", section: "Projects", path: "/projects", component: Projects },
+  { id: "5", section: "Contact", path: "/contact", component: Contact }
 ];
 
 export { NAV_ITEMS };

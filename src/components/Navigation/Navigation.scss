@@ -1,35 +1,5 @@
 @import "../../theme/globalVariables.scss";
 
-.nav {
-  display: flex;
-  height: 20vh;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  position: sticky;
-  z-index: 10;
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-    .menuItem {
-      padding: 2rem;
-      list-style: none;
-      .linkText {
-        text-decoration: none;
-      }
-    }
-  }
-  .ishaLogo {
-    display: flex;
-    justify-self: flex-start;
-    align-items: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-decoration: none;
-  }
-}
-
 .light {
   background-color: $lightThemePrimary;
 }
@@ -37,3 +7,99 @@
 .dark {
   background-color: $darkThemePrimary;
 }
+
+.nav {
+  background-color: $black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  z-index: 10;
+  height: 10vh;
+}
+
+.logoContainer {
+  text-decoration: none;
+  color: $green;
+  font-size: 5vh;
+  cursor: pointer;
+  position: absolute;
+  top: 2vh;
+  left: 4vh;
+  outline: none;
+}
+
+.navMenu {
+  display: flex;
+  font-size: 3vh;
+  text-decoration: none;
+  position: absolute;
+  top: 3vh;
+  right: 4vh;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.2rem 1rem;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+
+  &.active {
+    border-bottom: 2px solid $green;
+    padding-bottom: 0.2rem;
+    transition: 200ms ease-in-out;
+  }
+
+  &:hover {
+    background-color: $light-black;
+    border-radius: 0.2rem;
+  }
+}
+
+.mobileIconContainer {
+  font-size: 5vh;
+  cursor: pointer;
+  color: $green;
+  position: absolute;
+  top: 2.5vh;
+  right: 4vh;
+  z-index: 300;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+// @media screen and (max-width: 768px) {
+//   .navMenu {
+//     display: none;
+//     // position: absolute;
+//     // top: 0;
+//     // right: 0;
+//     // left: 0;
+//     // z-index: 12;
+//     // min-width: 100vh;
+//     // height: 100vh;
+//     // background-color: $black;
+//     // display: flex;
+//     // align-content: center;
+//     // flex-direction: column;
+//     // justify-content: center;
+//     // padding: 2vh;
+//   }
+
+//   .mobileIconContainer {
+//     font-size: 5vh;
+//     cursor: pointer;
+//     color: $green;
+//     position: absolute;
+//     top: 2.5vh;
+//     right: 4vh;
+//     z-index: 300;
+//   }
+// }

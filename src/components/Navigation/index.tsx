@@ -1,6 +1,8 @@
 import './Navigation.scss';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
+import { IoClose } from 'react-icons/io5';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 
 import { ThemeContext } from '../../theme/themeContext';
@@ -17,22 +19,42 @@ const Navigation: React.FunctionComponent<NavigationProps> = ({
   logo
 }: NavigationProps) => {
   const { isDarkModeActive } = React.useContext(ThemeContext);
+  const [activeMenuItem, setActiveMenuItem] = useState(navItems[0].id);
+  const [isVisibleMobileMenu, setVisibleMobileMenu] = useState(false);
   let modeClass = isDarkModeActive ? "dark" : "light";
 
   return (
-    <div className={`nav ${modeClass}`}>
-      <ul className="menu">
-        <Link to="/" className="ishaLogo">
-          IP
-        </Link>
+    // <div className={`${modeClass}`}>
+    <div className="nav">
+      <Link to="/" className="logoContainer">
+        IP
+      </Link>
+
+      {isVisibleMobileMenu ? (
+        <div className="mobileIconContainer">
+          <IoClose onClick={() => setVisibleMobileMenu(false)} />
+        </div>
+      ) : (
+        <div className="mobileIconContainer">
+          <FaBars onClick={() => setVisibleMobileMenu(true)} />
+        </div>
+      )}
+
+      <div className={"navMenu"}>
         {navItems.map((item, index) => (
-          <li className="menuItem" key={item.section}>
-            <Link to={item.path} className="linkText">
+          <div key={item.section}>
+            <Link
+              to={item.path}
+              className={`navLink ${
+                item.id === activeMenuItem ? "active" : ""
+              }`}
+              onClick={() => setActiveMenuItem(item.id)}
+            >
               {item.section}
             </Link>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
