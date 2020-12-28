@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const Contact = () => {
-  return <div>Contact ISHA PACHKAWADE</div>;
+  return <div className="section-inner">Contact ISHA PACHKAWADE</div>;
 };
 
 export default Contact;

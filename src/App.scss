@@ -25,3 +25,17 @@
   @extend .background;
   background-color: $lightThemePrimary;
 }
+
+.section {
+  background-color: red;
+  position: relative;
+  height: 100vh;
+  .section-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+}

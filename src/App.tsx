@@ -20,18 +20,20 @@ const App = (): JSX.Element => {
         }
       >
         <Navigation navItems={NAV_ITEMS} logo={logo} />
-        <Themer />
-        <Switch>
-          {NAV_ITEMS.map((item, index) => (
-            <Route
-              exact
-              path={item.path}
-              component={item.component}
-              key={`${item.path}_${item.component}`}
-            />
-          ))}
-          <Redirect to="/404" />
-        </Switch>
+        {/* <Themer /> */}
+        <div className="section">
+          <Switch>
+            {NAV_ITEMS.map((item, index) => (
+              <Route
+                exact
+                path={item.path}
+                component={item.component}
+                key={`${item.path}_${item.component}`}
+              />
+            ))}
+            <Redirect to="/404" />
+          </Switch>
+        </div>
       </div>
     </BrowserRouter>
   );
