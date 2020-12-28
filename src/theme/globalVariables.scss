@@ -1,18 +1,9 @@
-$lightThemePrimary: #fff;
-$darkThemePrimary: #000;
+$light-theme-primary: #fff;
+$dark-theme-primary: #000;
 
-$themeSecondary: #ffcfbc;
+$theme-secondary: #ffcfbc;
 
 $black: #101010;
 $light-black: #303030;
 $green: #ccf381;
 $white: #fff;
-
-//#fedcce
-//#ffcfbc
-// So that TypeScript will recognise them. Need to configure Webpack to access this
-:export {
-  lightthemeprimary: $lightThemePrimary;
-  darkthemeprimary: $darkThemePrimary;
-  themesecondary: $themeSecondary;
-}

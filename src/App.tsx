@@ -16,7 +16,7 @@ const App = (): JSX.Element => {
     <BrowserRouter>
       <div
         className={
-          theme.primaryTheme == "BLACK" ? "darkPrimary" : "lightPrimary"
+          theme.primaryTheme == "BLACK" ? "dark-primary" : "light-primary"
         }
       >
         <Navigation navItems={NAV_ITEMS} logo={logo} />

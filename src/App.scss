@@ -16,14 +16,14 @@
   min-height: 100vh;
 }
 
-.darkPrimary {
+.dark-primary {
   @extend .background;
-  background-color: $darkThemePrimary;
+  background-color: $dark-theme-primary;
 }
 
-.lightPrimary {
+.light-primary {
   @extend .background;
-  background-color: $lightThemePrimary;
+  background-color: $light-theme-primary;
 }
 
 .section {

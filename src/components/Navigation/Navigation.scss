@@ -1,15 +1,15 @@
 @import "../../theme/globalVariables.scss";
 
 .light {
-  background-color: $lightThemePrimary;
+  background-color: $light-theme-primary;
 }
 
 .dark {
-  background-color: $darkThemePrimary;
+  background-color: $dark-theme-primary;
 }
 
 .nav,
-.navExpanded {
+.nav-expanded {
   background-color: $black;
   display: flex;
   justify-content: space-between;
@@ -19,7 +19,7 @@
   height: 10vh;
 }
 
-.logoContainer {
+.logo-container {
   z-index: 2;
   text-decoration: none;
   color: $green;
@@ -31,8 +31,8 @@
   outline: none;
 }
 
-.navMenu,
-.navMenuExpanded {
+.nav-menu,
+.nav-menu-expanded {
   display: flex;
   font-size: 3vh;
   text-decoration: none;
@@ -41,11 +41,11 @@
   right: 4vh;
 }
 
-.navLinkContainer {
+.nav-link-container {
   padding-right: 1vh;
 }
 
-.navLink {
+.nav-link {
   color: $white;
   text-decoration: none;
   padding: 0.2rem 1rem;
@@ -65,7 +65,7 @@
   }
 }
 
-.mobileIconContainer {
+.mobile-icon-container {
   font-size: 5vh;
   cursor: pointer;
   color: $green;
@@ -90,7 +90,7 @@
     height: 10vh;
   }
 
-  .navExpanded {
+  .nav-expanded {
     background-color: $black;
     display: flex;
     flex-direction: column;
@@ -102,11 +102,11 @@
     height: 100vh;
   }
 
-  .navMenu {
+  .nav-menu {
     display: none;
   }
 
-  .navMenuExpanded {
+  .nav-menu-expanded {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,7 +118,7 @@
     height: 90vh;
   }
 
-  .navLinkContainer {
+  .nav-link-container {
     padding: 5vh;
   }
 }

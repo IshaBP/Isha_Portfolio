@@ -14,7 +14,7 @@ export const ThemeWrapper = (props: { children: React.ReactNode }) => {
     const userPrefersDark = getPrefColorScheme();
 
     if (isRepeatUser) {
-      const savedMode = JSON.parse(localStorage.getItem("dark")!); // Since isRepeatUser, dark will always be there. So ! to stop TS from yelling
+      const savedMode = JSON.parse(localStorage.getItem("dark")!); // Since isRepeatUser, dark will always be there. So ! to remove TS error.
       return savedMode;
     } else if (userPrefersDark) {
       return true;

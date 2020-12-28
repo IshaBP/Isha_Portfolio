@@ -4,7 +4,7 @@
   padding: 6vw;
   display: flex;
   overflow-wrap: break-word;
-  .logosContainer {
+  .logos-container {
     color: $green;
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +23,7 @@
       font-size: calc(1rem + 1vw);
     }
   }
-  .nameContainer {
+  .name-container {
     word-spacing: 1000vh;
     color: $white;
     font-size: calc(1rem + 5vw);
@@ -31,7 +31,7 @@
     padding-bottom: 3vw;
   }
 
-  .profileContainer {
+  .profile-container {
     color: $green;
     font-size: calc(1rem + 2vw);
     font-style: italic;

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import styles from './globalVariables.scss';
 import { PrimaryColor, ThemeConfig, ThemeContextType } from './types';
 
 export const Themes: ThemeConfig = {

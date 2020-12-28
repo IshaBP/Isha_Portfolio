@@ -7,7 +7,7 @@ import { SOCIAL } from './constants';
 const Home = () => {
   return (
     <div className="section-inner home">
-      <div className="logosContainer">
+      <div className="logos-container">
         <hr />
         {SOCIAL.map((item, index) => (
           <span key={index} className="logo">
@@ -15,10 +15,10 @@ const Home = () => {
           </span>
         ))}
       </div>
-      <div className="nameContainer">
+      <div className="name-container">
         <span>Isha Pachkawade</span>
       </div>
-      <div className="profileContainer">
+      <div className="profile-container">
         <span>Frontend Developer</span>
       </div>
     </div>
