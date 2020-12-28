@@ -5,7 +5,6 @@ import { FaBars } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 
-import { ThemeContext } from '../../theme/themeContext';
 import NavObject from './types';
 
 type NavigationProps = RouteComponentProps & {
@@ -14,15 +13,13 @@ type NavigationProps = RouteComponentProps & {
 };
 
 const Navigation: React.FunctionComponent<NavigationProps> = ({
-  navItems,
-  history,
-  logo
+  navItems
 }: NavigationProps) => {
-  const { isDarkModeActive } = React.useContext(ThemeContext);
+  // const { isDarkModeActive } = React.useContext(ThemeContext);
   const [activeMenuItem, setActiveMenuItem] = useState(navItems[0].id);
   const [isVisibleMobileMenu, setVisibleMobileMenu] = useState(false);
   const MobileMenuIcon = isVisibleMobileMenu ? IoClose : FaBars;
-  const modeClass = isDarkModeActive ? "dark" : "light";
+  // const modeClass = isDarkModeActive ? "dark" : "light";
   const navOpenClass = isVisibleMobileMenu ? "-expanded" : "";
 
   const renderNavLinks = () => {

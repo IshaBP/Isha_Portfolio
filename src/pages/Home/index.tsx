@@ -10,7 +10,13 @@ const Home = () => {
       <div className="logos-container">
         <hr />
         {SOCIAL.map((item, index) => (
-          <a href={item.link} key={index} className="logo" target="_blank">
+          <a
+            href={item.link}
+            key={index}
+            className="logo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {item.logo}
           </a>
         ))}

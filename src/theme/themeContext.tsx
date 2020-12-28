@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PrimaryColor, ThemeConfig, ThemeContextType } from './types';
+import { ThemeConfig, ThemeContextType } from './types';
 
 export const Themes: ThemeConfig = {
   DARK: {
