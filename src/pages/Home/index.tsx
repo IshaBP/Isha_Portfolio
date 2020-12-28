@@ -10,9 +10,9 @@ const Home = () => {
       <div className="logos-container">
         <hr />
         {SOCIAL.map((item, index) => (
-          <span key={index} className="logo">
+          <a href={item.link} key={index} className="logo" target="_blank">
             {item.logo}
-          </span>
+          </a>
         ))}
       </div>
       <div className="name-container">

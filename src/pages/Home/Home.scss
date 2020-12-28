@@ -21,6 +21,9 @@
     .logo {
       margin: 0.8vw;
       font-size: calc(1rem + 1vw);
+      text-decoration: none;
+      color: $green;
+      outline: none;
     }
   }
   .name-container {
