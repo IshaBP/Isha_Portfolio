@@ -8,7 +8,7 @@
   background-color: $darkThemePrimary;
 }
 
-.nav {
+.navContainer {
   background-color: $black;
   display: flex;
   justify-content: space-between;
@@ -16,10 +16,15 @@
   font-size: 1rem;
   position: sticky;
   z-index: 10;
+}
+
+.nav,
+.navExpanded {
   height: 10vh;
 }
 
 .logoContainer {
+  z-index: 12;
   text-decoration: none;
   color: $green;
   font-size: 5vh;
@@ -30,16 +35,18 @@
   outline: none;
 }
 
-.navMenu {
+.navMenu,
+.navMenuExpanded {
   display: flex;
   font-size: 3vh;
   text-decoration: none;
   position: absolute;
   top: 3vh;
   right: 4vh;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+}
+
+.navLinkContainer {
+  padding-right: 1vh;
 }
 
 .navLink {
@@ -49,11 +56,11 @@
   height: 100%;
   cursor: pointer;
   outline: none;
+  display: flex;
 
   &.active {
     border-bottom: 2px solid $green;
     padding-bottom: 0.2rem;
-    transition: 200ms ease-in-out;
   }
 
   &:hover {
@@ -75,31 +82,43 @@
   }
 }
 
-// @media screen and (max-width: 768px) {
-//   .navMenu {
-//     display: none;
-//     // position: absolute;
-//     // top: 0;
-//     // right: 0;
-//     // left: 0;
-//     // z-index: 12;
-//     // min-width: 100vh;
-//     // height: 100vh;
-//     // background-color: $black;
-//     // display: flex;
-//     // align-content: center;
-//     // flex-direction: column;
-//     // justify-content: center;
-//     // padding: 2vh;
-//   }
+@media screen and (max-width: 768px) {
+  .navContainer {
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    z-index: 10;
+  }
 
-//   .mobileIconContainer {
-//     font-size: 5vh;
-//     cursor: pointer;
-//     color: $green;
-//     position: absolute;
-//     top: 2.5vh;
-//     right: 4vh;
-//     z-index: 300;
-//   }
-// }
+  .nav {
+    height: 10vh;
+  }
+
+  .navExpanded {
+    height: 100vh;
+  }
+
+  .navMenu {
+    display: none;
+  }
+
+  .navMenuExpanded {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    position: sticky;
+    z-index: 10;
+    text-decoration: none;
+    height: 90vh;
+  }
+
+  .navLinkContainer {
+    padding: 5vh;
+  }
+}
