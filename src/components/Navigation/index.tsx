@@ -49,10 +49,15 @@ const Navigation: React.FunctionComponent<NavigationProps> = ({
   };
 
   return (
-    <div
-      className={`navContainer nav${navOpenClass}`} /* className={`${modeClass}`} */
-    >
-      <Link to="/" className="logoContainer">
+    <div className={`nav${navOpenClass}`} /* className={`${modeClass}`} */>
+      <Link
+        to={navItems[0].path}
+        className="logoContainer"
+        onClick={() => {
+          setActiveMenuItem(navItems[0].id);
+          setVisibleMobileMenu(!isVisibleMobileMenu);
+        }}
+      >
         IP
       </Link>
 

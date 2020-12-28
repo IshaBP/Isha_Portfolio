@@ -1,0 +1,39 @@
+@import "../../theme/globalVariables.scss";
+
+.home {
+  padding: 6vw;
+  display: flex;
+  overflow-wrap: break-word;
+  .logosContainer {
+    color: $green;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid $green;
+      margin: 1vw;
+      width: 50%;
+    }
+    .logo {
+      margin: 0.8vw;
+      font-size: calc(1rem + 1vw);
+    }
+  }
+  .nameContainer {
+    word-spacing: 1000vh;
+    color: $white;
+    font-size: calc(1rem + 5vw);
+    font-weight: bold;
+    padding-bottom: 3vw;
+  }
+
+  .profileContainer {
+    color: $green;
+    font-size: calc(1rem + 2vw);
+    font-style: italic;
+  }
+}
