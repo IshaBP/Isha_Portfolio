@@ -5,8 +5,8 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import logo from './assets/logo_transparent.png';
 import Navigation from './components/Navigation';
+import { ThemeContext } from './components/Themer/themeContext';
 import { NAV_ITEMS } from './constants';
-import { ThemeContext } from './theme/themeContext';
 
 const App = (): JSX.Element => {
   const { theme } = React.useContext(ThemeContext);
