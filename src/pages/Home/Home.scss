@@ -4,28 +4,28 @@
   padding: 6vw;
   display: flex;
   overflow-wrap: break-word;
+
   .logos-container {
-    color: $green;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     align-items: center;
+    font-size: calc(1rem + 1vw);
+
     hr {
-      display: block;
-      height: 1px;
       border: 0;
       border-top: 1px solid $green;
-      margin: 1vw;
+      margin-right: 1vw;
       width: 50%;
     }
+
     .logo {
-      margin: 0.8vw;
-      font-size: calc(1rem + 1vw);
+      margin-right: 0.8vw;
       text-decoration: none;
       color: $green;
       outline: none;
     }
   }
+
   .name-container {
     word-spacing: 1000vh;
     color: $white;
