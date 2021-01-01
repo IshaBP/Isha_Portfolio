@@ -46,7 +46,9 @@ const Navigation: React.FunctionComponent<NavigationProps> = ({
   };
 
   return (
-    <div className={`nav${navOpenClass}`} /* className={`${modeClass}`} */>
+    <div
+      className={`nav-container${navOpenClass}`} /* className={`${modeClass}`} */
+    >
       <Link
         to={navItems[0].path}
         className="logo-container"

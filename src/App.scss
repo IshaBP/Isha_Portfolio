@@ -11,34 +11,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.background {
-  background-size: cover;
-  min-height: 100vh;
-}
+// .background {
+//   background-size: cover;
+//   min-height: 100vh;
+// }
 
-.dark-primary {
-  @extend .background;
-  background-color: $dark-theme-primary;
-}
+// .dark-primary {
+//   @extend .background;
+//   background-color: $dark-theme-primary;
+// }
 
-.light-primary {
-  @extend .background;
-  background-color: $light-theme-primary;
-}
+// .light-primary {
+//   @extend .background;
+//   background-color: $light-theme-primary;
+// }
 
 .section {
-  background-color: $black;
+  background-color: red;
   position: absolute;
-  right: 0;
   bottom: 0;
-  left: 0;
   height: 100vh;
   .section-inner {
     display: flex;
     flex-direction: column;
-    // align-items: center;
     justify-content: center;
-    // text-align: center;
     height: 100%;
   }
 }
