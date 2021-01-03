@@ -12,8 +12,7 @@
     font-size: calc(1rem + 2vmin);
     width: 70%;
 
-    @media screen and (max-width: 810px) {
-      font-size: calc(0.7rem + 2vmin);
+    @media screen and (max-width: 930px) {
       width: 100%;
     }
 
@@ -22,6 +21,10 @@
       border-top: 1px solid $green;
       margin-right: 3vw;
       width: 60%;
+
+      @media screen and (max-width: 930px) {
+        width: 50%;
+      }
     }
 
     .logo {
