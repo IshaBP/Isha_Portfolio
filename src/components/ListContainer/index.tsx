@@ -14,9 +14,9 @@ const ListContainer: React.FunctionComponent<ListContainerProps> = ({
   return (
     <div className="container">
       <div className="header">{title}</div>
-      {skills.map(skill => {
-        <div>{skill.name}</div>;
-      })}
+      {skills.map(skill => (
+        <div>{skill.name}</div>
+      ))}
     </div>
   );
 };
