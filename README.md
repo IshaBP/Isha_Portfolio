@@ -1,6 +1,6 @@
 # Isha's Portfolio
 
-An under development project to have an online portfolio for myself.
+## An under development project to have an online portfolio for myself.
 
 ### Live Demo: https://isha-pachkawade.netlify.com/
 
