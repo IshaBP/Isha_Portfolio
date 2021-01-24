@@ -2,11 +2,13 @@ import './Home.scss';
 
 import React from 'react';
 
+// import Modal from '../../components/Modal';
 import { SOCIAL } from './constants';
 
 const Home = () => {
   return (
     <div className="section-inner home">
+      {/* <Modal defaultShow={true}> HI </Modal> */}
       <div className="logos-container">
         <hr />
         {SOCIAL.map((item, index) => (

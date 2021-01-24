@@ -1,3 +1,5 @@
+import './ListContainer.scss';
+
 import React from 'react';
 
 import ListConfig from './types';
@@ -15,7 +17,7 @@ const ListContainer: React.FunctionComponent<ListContainerProps> = ({
     <div className="container">
       <div className="header">{title}</div>
       {skills.map(skill => (
-        <div>{skill.name}</div>
+        <div key={skill.name}>{skill.name}</div>
       ))}
     </div>
   );
