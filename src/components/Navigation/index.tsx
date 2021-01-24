@@ -5,6 +5,7 @@ import { FaBars } from 'react-icons/fa';
 import { IoClose } from 'react-icons/io5';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 
+import { ThemeContext } from '../Themer/themeContext';
 import NavObject from './types';
 
 type NavigationProps = RouteComponentProps & {
@@ -15,16 +16,45 @@ type NavigationProps = RouteComponentProps & {
 const Navigation: React.FunctionComponent<NavigationProps> = ({
   navItems
 }: NavigationProps) => {
-  // const { isDarkModeActive } = React.useContext(ThemeContext);
+  const { isDarkModeActive } = React.useContext(ThemeContext);
+
   const [activeMenuItem, setActiveMenuItem] = useState(navItems[0].id);
   const [isVisibleMobileMenu, setVisibleMobileMenu] = useState(false);
+
+  const modeClass = isDarkModeActive ? "dark" : "light";
   const MobileMenuIcon = isVisibleMobileMenu ? IoClose : FaBars;
-  // const modeClass = isDarkModeActive ? "dark" : "light";
-  const navOpenClass = isVisibleMobileMenu ? "-expanded" : "";
+
+  const renderIPLogo = () => {
+    return (
+      <Link
+        className="logo-container"
+        to={navItems[0].path}
+        onClick={() => {
+          setActiveMenuItem(navItems[0].id);
+          setVisibleMobileMenu(false);
+        }}
+      >
+        IP
+      </Link>
+    );
+  };
+
+  const renderMobileMenuIcon = () => {
+    return (
+      <MobileMenuIcon
+        onClick={() => setVisibleMobileMenu(!isVisibleMobileMenu)}
+        className="mobile-menu"
+      />
+    );
+  };
 
   const renderNavLinks = () => {
     return (
-      <div className={`nav-menu${navOpenClass}`}>
+      <div
+        className={`nav-menu ${modeClass} ${
+          !isVisibleMobileMenu ? "hide-menu" : ""
+        }`}
+      >
         {navItems.map(item => (
           <div key={item.section} className="nav-link-container">
             <Link
@@ -34,7 +64,7 @@ const Navigation: React.FunctionComponent<NavigationProps> = ({
               }`}
               onClick={() => {
                 setActiveMenuItem(item.id);
-                setVisibleMobileMenu(!isVisibleMobileMenu);
+                setVisibleMobileMenu(false);
               }}
             >
               {item.section}
@@ -46,25 +76,9 @@ const Navigation: React.FunctionComponent<NavigationProps> = ({
   };
 
   return (
-    <div
-      className={`nav-container${navOpenClass}`} /* className={`${modeClass}`} */
-    >
-      <Link
-        to={navItems[0].path}
-        className="logo-container"
-        onClick={() => {
-          setActiveMenuItem(navItems[0].id);
-          setVisibleMobileMenu(!isVisibleMobileMenu);
-        }}
-      >
-        IP
-      </Link>
-
-      <MobileMenuIcon
-        onClick={() => setVisibleMobileMenu(!isVisibleMobileMenu)}
-        className="mobile-icon-container"
-      />
-
+    <div className={`${modeClass} nav-container`}>
+      {renderIPLogo()}
+      {renderMobileMenuIcon()}
       {renderNavLinks()}
     </div>
   );

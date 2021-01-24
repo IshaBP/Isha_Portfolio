@@ -1,17 +1,7 @@
 import React from 'react';
 
-import { ThemeConfig, ThemeContextType } from './types';
-
-export const Themes: ThemeConfig = {
-  DARK: {
-    primaryTheme: "BLACK",
-    secondaryTheme: "PINK"
-  },
-  LIGHT: {
-    primaryTheme: "WHITE",
-    secondaryTheme: "PINK"
-  }
-};
+import { ThemeContextType } from './types';
+import { Themes } from './utils';
 
 const initialState: ThemeContextType = {
   theme: Themes.DARK,
