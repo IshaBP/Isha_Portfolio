@@ -1,65 +1,78 @@
-import ListConfig from '../../components/ListContainer/types';
+import { ReactComponent as Bitbucket } from '../../assets/bitbucket (1).svg';
+import { ReactComponent as Confluence } from '../../assets/confluence.svg';
+import { ReactComponent as CSS } from '../../assets/css.svg';
+import { ReactComponent as Figma } from '../../assets/figma.svg';
+import { ReactComponent as Git } from '../../assets/git.svg';
+import { ReactComponent as HTML } from '../../assets/html.svg';
+import { ReactComponent as JavaScript } from '../../assets/javascript (1).svg';
+import { ReactComponent as JIRA } from '../../assets/jira.svg';
+import { ReactComponent as Netlify } from '../../assets/netlify.svg';
+import { ReactComponent as React } from '../../assets/react.svg';
+import { ReactComponent as Redux } from '../../assets/redux.svg';
+import { ReactComponent as SASS } from '../../assets/sass.svg';
+import { ReactComponent as TypeScript } from '../../assets/typescript.svg';
+import { ListConfig } from '../../components/ListContainer/types';
 
 const SKILLS_GROUPS: Array<ListConfig> = [
   {
     title: "Technologies",
-    skills: [
+    listItems: [
       {
         name: "JavaScript",
-        logo: ""
+        logo: JavaScript
       },
       {
         name: "TypeScript",
-        logo: ""
+        logo: TypeScript
       },
       {
         name: "React",
-        logo: ""
+        logo: React
       },
       {
         name: "Redux",
-        logo: ""
+        logo: Redux
       },
       {
         name: "CSS",
-        logo: ""
+        logo: CSS
       },
       {
         name: "SASS",
-        logo: ""
+        logo: SASS
       },
       {
         name: "HTML",
-        logo: ""
+        logo: HTML
       }
     ]
   },
   {
     title: "Tools",
-    skills: [
+    listItems: [
       {
         name: "Git",
-        logo: ""
+        logo: Git
       },
       {
         name: "JIRA",
-        logo: ""
+        logo: JIRA
       },
       {
         name: "Confluence",
-        logo: ""
+        logo: Confluence
       },
       {
         name: "Bitbucket",
-        logo: ""
+        logo: Bitbucket
       },
       {
         name: "Netlify",
-        logo: ""
+        logo: Netlify
       },
       {
         name: "Figma",
-        logo: ""
+        logo: Figma
       }
     ]
   }
