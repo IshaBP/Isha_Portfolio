@@ -5,7 +5,7 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import logo from './assets/logo_transparent.png';
 import Navigation from './components/Navigation';
-import Themer from './components/Themer';
+// import Themer from './components/Themer';
 import { ThemeContext } from './components/Themer/themeContext';
 import { NAV_ITEMS } from './constants';
 
