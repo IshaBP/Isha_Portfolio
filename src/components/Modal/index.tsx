@@ -1,12 +1,14 @@
+import './Modal.scss';
+
 import React, { useState } from 'react';
 
 type ModalProps = {
-  defaultShow: boolean;
+  defaultShow?: boolean;
   children: React.ReactNode;
 };
 
 const Modal: React.FunctionComponent<ModalProps> = ({
-  defaultShow,
+  defaultShow = false,
   children
 }: ModalProps) => {
   const [showModal, setShowModal] = useState(defaultShow);
@@ -14,6 +16,7 @@ const Modal: React.FunctionComponent<ModalProps> = ({
   const showHideClassName = showModal
     ? "modal display-block"
     : "modal display-none";
+  console.log("children", children);
 
   return (
     <div className={showHideClassName}>
