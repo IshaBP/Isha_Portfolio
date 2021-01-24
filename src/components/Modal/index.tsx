@@ -1,31 +1,41 @@
 import './Modal.scss';
 
 import React, { useState } from 'react';
+import { FaWindowClose } from 'react-icons/fa';
+
+import { ThemeContext } from '../Themer/themeContext';
 
 type ModalProps = {
   defaultShow?: boolean;
+  onClose?: () => void;
   children: React.ReactNode;
 };
 
 const Modal: React.FunctionComponent<ModalProps> = ({
   defaultShow = false,
+  onClose = () => {},
   children
 }: ModalProps) => {
   const [showModal, setShowModal] = useState(defaultShow);
 
-  const showHideClassName = showModal
-    ? "modal display-block"
-    : "modal display-none";
-  console.log("children", children);
+  const { isDarkModeActive } = React.useContext(ThemeContext);
+  const modeClass = isDarkModeActive ? "dark" : "light";
+
+  const handleClose = () => {
+    onClose();
+    setShowModal(false);
+  };
 
   return (
-    <div className={showHideClassName}>
-      <section className="modal-main">
-        {children}
-        <button type="button" onClick={() => setShowModal(false)}>
-          Close
-        </button>
-      </section>
+    <div>
+      {showModal ? (
+        <div className="modal">
+          <section className={`modal-main ${modeClass}`}>
+            <FaWindowClose onClick={handleClose} className="close-icon" />
+            {children}
+          </section>
+        </div>
+      ) : null}
     </div>
   );
 };

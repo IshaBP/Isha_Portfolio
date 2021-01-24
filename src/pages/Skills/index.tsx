@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <div className="section-inner skills">
       {SKILLS_GROUPS.map(skillsGroup => (
-        <ListContainer listConfig={skillsGroup} />
+        <ListContainer listConfig={skillsGroup} key={skillsGroup.title} />
       ))}
     </div>
   );
