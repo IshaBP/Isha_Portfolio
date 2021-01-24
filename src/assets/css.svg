@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" width="55" height="55" version="1.1">
+    <g id="surface1">
+        <path d="M41 5H7l3 34 14 4 14-4z" fill="#0277BD"/>
+        <path d="M24 8v31.898L35.2 36.7 37.7 8z" fill="#039BE5"/>
+        <path d="M33.102 13H24v4h4.898l-.296 4H24v4h4.398l-.296 4.5L24 30.898v4.204l7.898-2.602.704-11.5z" fill="#FFF"/>
+        <path d="M24 13v4h-8.898l-.301-4zm-4.602 8l.204 4H24v-4zm.403 6h-4l.3 5.5L24 35.102v-4.204L19.898 29.5z" fill="#EEE"/>
+    </g>
+    <metadata>
+        <rdfRDF xmlnsrdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlnsrdfs="http://www.w3.org/2000/01/rdf-schema#" xmlnsdc="http://purl.org/dc/elements/1.1/">
+            <rdfDescription about="https://iconscout.com/legal#licenses" dctitle="css" dcdescription="css" dcpublisher="Iconscout" dcdate="2017-12-15" dcformat="image/svg+xml" dclanguage="en">
+                <dccreator>
+                    <rdfBag>
+                        <rdfli>
+                            Icons8
+                        </rdfli>
+                    </rdfBag>
+                </dccreator>
+            </rdfDescription>
+        </rdfRDF>
+    </metadata>
+</svg>

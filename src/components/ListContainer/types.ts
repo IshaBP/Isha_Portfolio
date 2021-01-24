@@ -1,11 +1,9 @@
-type ListConfig = {
+export type ListConfig = {
   title: string;
-  skills: Array<Skill>;
+  listItems: Array<Skill>;
 };
 
-type Skill = {
+export type Skill = {
   name: string;
-  logo: string;
+  logo: any;
 };
-
-export default ListConfig;

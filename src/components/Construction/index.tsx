@@ -5,7 +5,7 @@ import { IoConstruct } from 'react-icons/io5';
 
 const constructionIconClasses = ["icon-left", "icon-right"];
 
-const Construction = () => {
+const Construction: React.FunctionComponent<{}> = () => {
   const [iconClassIndex, setIconClassIndex] = useState(0);
 
   useEffect(() => {
