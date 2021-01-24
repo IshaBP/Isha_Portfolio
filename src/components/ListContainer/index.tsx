@@ -1,3 +1,5 @@
+import './ListContainer.scss';
+
 import React from 'react';
 
 import ListConfig from './types';

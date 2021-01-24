@@ -2,7 +2,7 @@ import './Home.scss';
 
 import React from 'react';
 
-import Modal from '../../components/Modal';
+// import Modal from '../../components/Modal';
 import { SOCIAL } from './constants';
 
 const Home = () => {
