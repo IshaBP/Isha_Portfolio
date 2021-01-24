@@ -2,7 +2,6 @@ import './ListContainer.scss';
 
 import React from 'react';
 
-import { ReactComponent as ReactLogo } from '../../assets/javascript (1).svg';
 import ListItem from './ListItem';
 import { ListConfig } from './types';
 

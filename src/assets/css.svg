@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" width="55" height="55" version="1.1">
+<svg xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" width="55" height="55" viewBox="0 0 45 45" version="1.1">
     <g id="surface1">
         <path d="M41 5H7l3 34 14 4 14-4z" fill="#0277BD"/>
         <path d="M24 8v31.898L35.2 36.7 37.7 8z" fill="#039BE5"/>
