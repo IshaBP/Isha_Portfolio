@@ -1,5 +1,4 @@
 import { IoClose } from 'react-icons/io5';
-import { Link as LinkRouter } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
 import styled from 'styled-components';
 

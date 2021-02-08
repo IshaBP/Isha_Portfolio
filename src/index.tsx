@@ -2,16 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from './App';
-import { ThemeWrapper } from './components/Themer/themeContextWrapper';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeWrapper>
-      <App />
-    </ThemeWrapper>
-  </React.StrictMode>,
-  document.getElementById("root")
+	<React.StrictMode>
+		<App />
+	</React.StrictMode>,
+	document.getElementById("root"),
 );
 
 // If you want to start measuring performance in your app, pass a function

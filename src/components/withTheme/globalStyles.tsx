@@ -1,5 +1,6 @@
-@import "./colours.scss";
+import { createGlobalStyle } from 'styled-components';
 
+export const GlobalStyles = createGlobalStyle`
 * {
   margin: 0;
   padding: 0;
@@ -27,11 +28,11 @@ body {
   align-content: center;
 
   &.light {
-    background-color: $light-theme-primary;
+    background-color: #000;
   }
 
   &.dark {
-    background-color: $dark-theme-primary;
+    background-color: #000;
   }
   .section-inner {
     display: flex;
@@ -39,3 +40,5 @@ body {
     padding: 6vw;
   }
 }
+
+  `;
