@@ -16,7 +16,7 @@ body {
   position: relative;
 }
 
-.section {
+/* .section {
   position: absolute;
   height: 100vh;
   top: 0vh;
@@ -39,6 +39,6 @@ body {
     flex-direction: column;
     padding: 6vw;
   }
-}
+} */
 
   `;

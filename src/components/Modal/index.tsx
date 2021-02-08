@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaWindowClose } from 'react-icons/fa';
 
-import { ModalWrapper } from './ModalElements';
+import { CloseIcon, ModalBody, ModalPageSpan } from './ModalElements';
 
 type ModalProps = {
 	defaultShow?: boolean;
@@ -22,16 +22,16 @@ const Modal: React.FunctionComponent<ModalProps> = ({
 	};
 
 	return (
-		<ModalWrapper>
+		<>
 			{showModal ? (
-				<div className="modal">
-					<section className={`modal-main`}>
-						<FaWindowClose onClick={handleClose} className="close-icon" />
+				<ModalPageSpan>
+					<ModalBody>
+						<CloseIcon onClick={handleClose} />
 						{children}
-					</section>
-				</div>
+					</ModalBody>
+				</ModalPageSpan>
 			) : null}
-		</ModalWrapper>
+		</>
 	);
 };
 

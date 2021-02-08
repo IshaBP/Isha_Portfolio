@@ -1,6 +1,6 @@
 export type Themes = "DARK" | "LIGHT";
 
-type ThemeParams = {
+export type ThemeParams = {
 	primary: string;
 	secondary: string;
 	black: string;

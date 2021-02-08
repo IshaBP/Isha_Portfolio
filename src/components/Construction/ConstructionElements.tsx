@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 
+import { ThemeParams } from '../withTheme/types';
+
 export const ConstructionWrapper = styled.div`
+	color: ${(props: { theme: ThemeParams }) => props.theme.green};
+	display: flex;
+	flex-direction: column;
+`;
+
+export const ConstructionWrapper1 = styled.div`
 	.construction {
 		color: $green;
 		display: flex;

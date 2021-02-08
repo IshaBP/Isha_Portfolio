@@ -2,39 +2,39 @@ import React from 'react';
 
 import Construction from '../../components/Construction/index';
 import Modal from '../../components/Modal';
+import withSectionWrapper from '../../components/withSectionWrapper';
 import { SOCIAL } from './constants';
-import { HomeWrapper } from './HomeElements';
+import {
+    HomeContainer, Logo, LogosContainer, NameContainer, ProfileContainer
+} from './HomeElements';
 
 const Home = () => {
 	return (
-		<HomeWrapper>
-			<div className="section-inner home" id="home">
-				<Modal defaultShow={true}>
-					<Construction />
-				</Modal>
-				<div className="logos-container">
-					<hr />
-					{SOCIAL.map((item, index) => (
-						<a
-							href={item.link}
-							key={index}
-							className="logo"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							{item.logo}
-						</a>
-					))}
-				</div>
-				<div className="name-container">
-					<span>Isha Pachkawade</span>
-				</div>
-				<div className="profile-container">
-					<span>Frontend Developer</span>
-				</div>
-			</div>
-		</HomeWrapper>
+		<HomeContainer>
+			<Modal defaultShow={true}>
+				<Construction />
+			</Modal>
+			<LogosContainer>
+				<hr />
+				{SOCIAL.map((item, index) => (
+					<Logo
+						href={item.link}
+						key={index}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						{item.logo}
+					</Logo>
+				))}
+			</LogosContainer>
+			<NameContainer>
+				<span>Isha Pachkawade</span>
+			</NameContainer>
+			<ProfileContainer>
+				<span>Frontend Developer</span>
+			</ProfileContainer>
+		</HomeContainer>
 	);
 };
 
-export default Home;
+export default withSectionWrapper(Home);

@@ -19,12 +19,10 @@ const Construction: React.FunctionComponent<{}> = () => {
 
 	return (
 		<ConstructionWrapper>
-			<div className="construction">
-				<div className={`${constructionIconClasses[iconClassIndex]}`}>
-					<IoConstruct />
-				</div>
-				<span className="construction-text">Site is under construction</span>
+			<div className={`${constructionIconClasses[iconClassIndex]}`}>
+				<IoConstruct />
 			</div>
+			<span className="construction-text">Site is under construction</span>
 		</ConstructionWrapper>
 	);
 };
