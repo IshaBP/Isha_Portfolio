@@ -10,28 +10,28 @@ import { ThemeContext } from './components/Themer/themeContext';
 import { NAV_ITEMS } from './constants';
 
 const App = (): JSX.Element => {
-  const { isDarkModeActive } = React.useContext(ThemeContext);
-  const modeClass = isDarkModeActive ? "dark" : "light";
+	const { isDarkModeActive } = React.useContext(ThemeContext);
+	const modeClass = isDarkModeActive ? "dark" : "light";
 
-  return (
-    <BrowserRouter>
-      <Navigation navItems={NAV_ITEMS} logo={logo} />
-      <div className={`section ${modeClass}`}>
-        {/* <Themer /> */}
-        <Switch>
-          {NAV_ITEMS.map(item => (
-            <Route
-              exact
-              path={item.path}
-              component={item.component}
-              key={`${item.path}_${item.component}`}
-            />
-          ))}
-          <Redirect to="/404" />
-        </Switch>
-      </div>
-    </BrowserRouter>
-  );
+	return (
+		<BrowserRouter>
+			<Navigation navItems={NAV_ITEMS} />
+			<div className={`section ${modeClass}`}>
+				{/* <Themer /> */}
+				<Switch>
+					{NAV_ITEMS.map((item) => (
+						<Route
+							exact
+							path={item.path}
+							component={item.component}
+							key={`${item.path}_${item.component}`}
+						/>
+					))}
+					<Redirect to="/404" />
+				</Switch>
+			</div>
+		</BrowserRouter>
+	);
 };
 
 export default App;
